@@ -15,14 +15,8 @@ const cube = new THREE.Mesh( geometry, material );
 scene.add( cube );
 
 
-camera.position.z = 5;
-
-// Create a canvas element
-const canvas = document.createElement('canvas');
-
-// Set the canvas size
-canvas.width = 400;
-canvas.height = 400;
+camera.position.set(0, 0, 5);
+camera.lookAt(0, 0, 0);
 
 
 /* ----------------------------- Sphere ---------------------------- */
@@ -38,6 +32,8 @@ const sphere = new THREE.Mesh(geometry2, material2);
 
 // Add the sphere to the scene
 scene.add(sphere);
+
+sphere.position.set(2, 0, 0);
 
 
 /* ----------------------------- Hexagon ---------------------------- */
@@ -71,6 +67,8 @@ const hexagon = new THREE.Mesh(geometry3, material3);
 // Add the hexagon to the scene
 scene.add(hexagon);
 
+hexagon.position.set(4, 0, 0);
+
 
 /* ----------------------------- Cone ---------------------------- */
 
@@ -86,6 +84,7 @@ const cone = new THREE.Mesh(geometry4, material4);
 // Add the cone to the scene
 scene.add(cone);
 
+cone.position.set(-2, 0, 0);
 
 /* ----------------------------- Cylinder ---------------------------- */
 
@@ -101,7 +100,7 @@ const cylinder = new THREE.Mesh(geometry5, material5);
 // Add the cylinder to the scene
 scene.add(cylinder);
 
-
+cylinder.position.set(-4, 0, 0);
 
 /* ----------------------------- Scene rendering ---------------------------- */
 
