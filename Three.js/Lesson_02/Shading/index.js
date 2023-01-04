@@ -34,6 +34,7 @@ const gold = new THREE.MeshPhongMaterial({
     gold.color = new THREE.Color(0.75164, 0.60648, 0.22648);
     gold.specular= new THREE.Color(0.633, 0.727811, 0.633);
     gold.shininess = 0.4 * 256;
+    gold.flatShading = true;
 // Create a mesh
 const sphere = new THREE.Mesh(geometry2, emerald);
 
@@ -48,7 +49,7 @@ const sphere2 = new THREE.Mesh(geometry2, gold);
 // Add the sphere to the scene
 scene.add(sphere2);
 
-sphere.position.set(2.5, 0, 0);
+sphere2.position.set(2.5, 0, 0);
 
 
 // White directional light at half intensity shining from the top.
